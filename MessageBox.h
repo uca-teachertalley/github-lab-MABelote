@@ -128,7 +128,7 @@ class MessageBox
         {
             if (empty(i))
             {
-                std::cout << i << ": <empty>" << std::endl;
+                std::cout << i << ":<empty>" << std::endl;
             }
             else
             {
