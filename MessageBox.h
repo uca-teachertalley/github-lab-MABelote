@@ -121,20 +121,20 @@ class MessageBox
     {
         std::cout << toString() << std::endl;
     }
+
 void print_verbose() const
 {
     for (int i = 0; i < mySize; i++)
     {
-        std::cout << i << ":"; 
         if (empty(i))
         {
-            std::cout << "<empty>";
+            std::cout << i << ":<empty>:" << std::endl;  
         }
         else
         {
-            std::cout << messages[i];
+            std::cout << i << ":" << messages[i] << ":" << std::endl;  
         }
-        std::cout << ":" << std::endl; 
+     
     }
 }
 
