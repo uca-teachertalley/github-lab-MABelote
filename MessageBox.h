@@ -121,22 +121,22 @@ class MessageBox
     {
         std::cout << toString() << std::endl;
     }
-
-    void print_verbose() const
+void print_verbose() const
+{
+    for (int i = 0; i < mySize; i++)
     {
-        for (int i = 0; i < mySize; i++)
+        std::cout << i << ":"; 
+        if (empty(i))
         {
-            if (empty(i))
-            {
-                std::cout << i << ":<empty>:" << std::endl;
-            }
-            else
-            {
-                std::cout << i << ":" << messages[i] << std::endl;
-            }
+            std::cout << "<empty>";
         }
+        else
+        {
+            std::cout << messages[i];
+        }
+        std::cout << ":" << std::endl; 
     }
-};
+}
 
 template<typename T>
 std::ostream& operator<<(std::ostream& os, const MessageBox<T>& messageBox) 
