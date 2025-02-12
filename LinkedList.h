@@ -1,3 +1,15 @@
+/**
+* ---------------------------------------------------------------------
+* @copyright
+* Copyright 2024 Michelle Talley University of Central Arkansas
+*
+* @author: <Alex Belote>
+* @course: Data Structures (CSCI 2320)
+*
+* @file LinkedList.h
+* @brief Declaration of the LinkedList class and its methods.
+-----------------------------------------------------------------------
+*/
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
 
