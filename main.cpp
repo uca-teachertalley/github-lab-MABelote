@@ -13,6 +13,7 @@
 
 #include <iostream>
 #include "LinkedList.h"
+#include <string>
 
 int main() {
     std::cout << "Welcome to the LinkedList test program." << std::endl;
