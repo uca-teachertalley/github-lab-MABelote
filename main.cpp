@@ -70,7 +70,7 @@ int main() {
     catch (std::out_of_range &e) {
         std::cout << "Exception: " << e.what() << std::endl;
     }
-    std::cout << "String list 1: " << myStringList1 << std::endl; 
+    std::cout << "String list 1: " << myStringList1 << std::endl;
 
     std::cout << "Goodbye!" << std::endl;
     return 0;
