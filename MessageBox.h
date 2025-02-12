@@ -132,7 +132,7 @@ class MessageBox
             }
             else
             {
-                std::cout << i << ":" << messages[i] << std::endl;
+                std::cout << ":" << i << ":" << messages[i] << std::endl;
             }
          std::cout << ":";
         }
