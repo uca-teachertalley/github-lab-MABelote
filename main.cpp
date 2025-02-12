@@ -1,14 +1,4 @@
-@@ -3,7 +3,7 @@
-* @copyright
-* Copyright 2024 Michelle Talley University of Central Arkansas
-*
-* @author: <student name>
-* @author: <Alex Belote>
-* @course: Data Structures (CSCI 2320)
-*
-* @file main.cpp
-@@ -12,167 +12,40 @@
-*/
+
 
 #include <iostream>
 #include <string>
