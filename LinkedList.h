@@ -105,6 +105,27 @@ public:
         count--;
     }
 
+  void erase(int index) {
+        if (index < 0 || index >= count) {
+            throw std::out_of_range("Index out of range");
+        }
+        if (index == 0) {
+            pop_front();
+        } else {
+            Node* temp = head;
+            for (int i = 0; i < index - 1; i++) {
+                temp = temp->next;
+            }
+            Node* nodeToDelete = temp->next;
+            temp->next = nodeToDelete->next;
+            if (nodeToDelete == tail) {
+                tail = temp; 
+            }
+            delete nodeToDelete;
+            count--;
+        }
+    }
+
     void pop_front() {
         if (empty()) throw std::out_of_range("LinkedList is empty");
         Node* temp = head;
@@ -136,6 +157,12 @@ public:
     }
 
     void print() const { std::cout << toString() << std::endl; }
+
+ friend std::ostream& operator<<(std::ostream& os, const LinkedList<T>& list) {
+        os << list.toString();
+        return os;
+    }
+
 };
 
 #endif // LINKEDLIST_H
