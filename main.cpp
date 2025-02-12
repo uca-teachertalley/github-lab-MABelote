@@ -6,10 +6,10 @@
 * @author: <Alex Belote>
 * @course: Data Structures (CSCI 2320)
 *
-* @file LinkedList.h
-* @brief Declaration of the LinkedList class and its methods.
+* @file main.cpp
+* @brief Driver program for Linked List Lab
 -----------------------------------------------------------------------
-*/
+*/ 
 #include <iostream>
 #include "LinkedList.h"
 #include "MessageBox.h"
