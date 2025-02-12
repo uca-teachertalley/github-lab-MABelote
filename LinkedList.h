@@ -1,3 +1,6 @@
+#ifndef LINKEDLIST_H
+#define LINKEDLIST_H
+
 /**
 * ---------------------------------------------------------------------
 * @copyright
@@ -10,8 +13,6 @@
 * @brief Declaration of the LinkedList class and its methods.
 -----------------------------------------------------------------------
 */
-#ifndef LINKEDLIST_H
-#define LINKEDLIST_H
 
 #include <iostream>
 #include <string>
