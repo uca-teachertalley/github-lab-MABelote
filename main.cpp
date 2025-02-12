@@ -5,7 +5,7 @@
 
 int main() {
     std::cout << "Welcome to the LinkedList test program." << std::endl;
-    std::cout << "Test some integer lists..." << std::endl;
+    std::cout << "\nTest some integer lists..." << std::endl;
 
     LinkedList<int> myIntList1;
     myIntList1.push_back(10);
@@ -60,7 +60,7 @@ int main() {
 
     std::cout << " Integer list 2 via std cout: " << myIntList2 << std::endl;
 
-    std::cout << "Test some exceptions..." << std::endl;
+    std::cout << "\nTest some exceptions..." << std::endl;
     std::cout << " List 1 is " << (myIntList1.empty() ? "empty" : "not empty") << std::endl;
 
     try {
@@ -75,7 +75,7 @@ int main() {
         std::cout << " Exception: " << e.what() << std::endl;
     }
 
-    std::cout << "Test some string lists..." << std::endl;
+    std::cout << "\nTest some string lists..." << std::endl;
 
     LinkedList<std::string> myStringList1;
     myStringList1.push_front("spam?");
@@ -85,7 +85,7 @@ int main() {
 
     std::cout << " String list 1: " << myStringList1 << std::endl;
 
-    std::cout << " Try inserting an element at position 3" << std::endl;
+    std::cout << "\nTry inserting an element at position 3" << std::endl;
     try {
         myStringList1.insert(3, "more");
         std::cout << " String list 1 has length " << myStringList1.size() << std::endl;  
@@ -117,11 +117,11 @@ int main() {
             std::cout << "Exception: " << e.what() << std::endl;
         }
     
-    std::cout << " Try inserting an element at the end" << std::endl;
+    std::cout << "\nTry inserting an element at the end" << std::endl;
     myStringList1.insert(myStringList1.size(), "I love spam!");
     std::cout << " String list 1: " << myStringList1 << std::endl;
 
-    std::cout << " Try inserting an element out of range" << std::endl;
+    std::cout << "\nTry inserting an element out of range" << std::endl;
     try {
         myStringList1.insert(7, "error");
         std::cout << " String list 1 has length " << myStringList1.size() << std::endl;
@@ -130,7 +130,7 @@ int main() {
     }
     std::cout << " Expected failure trying to insert out of range" << std::endl;
 
-    std::cout << " Remove the first and last element and print result" << std::endl;
+    std::cout << "\nRemove the first and last element and print result" << std::endl;
     myStringList1.pop_front();
     myStringList1.pop_back();
     std::cout << " String list 1: " << myStringList1 << std::endl;
