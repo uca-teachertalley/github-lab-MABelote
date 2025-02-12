@@ -95,10 +95,28 @@ int main() {
     }
     std::cout << " String list 1: " << myStringList1 << std::endl;
 
-    std::cout << " Try inserting an element at the beginning" << std::endl;
-    myStringList1.insert(0, "Sir!  Sir!");  // Note double spaces required
-    std::cout << " String list 1: " << myStringList1 << std::endl;
+    std::cout << "\nTry inserting an element at the beginning" << std::endl;
+    try
+        {
+    myStringList1.insert(0, "Sir!  Sir!");  
+    std::cout << " String list 1 has length " << myStringList1.size() << std::endl;
+        }
+        catch (std::out_of_range &e)
+        {
+            std::cout << "Exception: " << e.what() << std::endl;
+        }
+    std::cout << "String list 1: " << myStringList1 << std::endl;
 
+    try
+        {
+            myStringList1.insert(myStringList1.size(),"I love spam!");
+            std::cout << "String list 1 has length " << myStringList1.size() << std::endl;
+        }
+        catch(std::out_of_range &e)
+        {
+            std::cout << "Exception: " << e.what() << std::endl;
+        }
+    
     std::cout << " Try inserting an element at the end" << std::endl;
     myStringList1.insert(myStringList1.size(), "I love spam!");
     std::cout << " String list 1: " << myStringList1 << std::endl;
