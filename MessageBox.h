@@ -122,21 +122,24 @@ class MessageBox
         std::cout << toString() << std::endl;
     }
 
-    void print_verbose() const
+void print_verbose() const
+{
+    for (int i = 0; i < mySize; i++)
     {
-        for (int i = 0; i < mySize; i++)
+        std::cout << i << ":";  // Print index followed by a colon
+
+        if (empty(i))
         {
-            if (empty(i))
-            {
-                std::cout << i << ":<empty>:" << std::endl;
-            }
-            else
-            {
-                std::cout << i << ":" << messages[i] << std::endl;
-            }
-         std::cout << ":";
+            std::cout << "<empty>";  // Print "<empty>" without an extra colon before newline
         }
+        else
+        {
+            std::cout << messages[i];  // Print message value without extra colon
+        }
+
+        std::cout << ":" << std::endl;  // Correctly add a colon at the end of each line
     }
+}
 };
 
 template<typename T>
