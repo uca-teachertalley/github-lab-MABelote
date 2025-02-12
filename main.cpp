@@ -4,7 +4,6 @@
 
 int main() {
     std::cout << "Welcome to the LinkedList test program." << std::endl;
-    std::cout << std::endl;
     std::cout << "Test some integer lists..." << std::endl;
 
     LinkedList<int> myIntList1;
@@ -59,7 +58,6 @@ int main() {
     myIntList2.print();
 
     std::cout << " Integer list 2 via std cout: " << myIntList2 << std::endl;
-    std::cout << std::endl;
 
     std::cout << "Test some exceptions..." << std::endl;
     std::cout << " List 1 is " << (myIntList1.empty() ? "empty" : "not empty") << std::endl;
@@ -76,7 +74,6 @@ int main() {
         std::cout << " Exception: " << e.what() << std::endl;
     }
 
-    std::cout << std::endl;
     std::cout << "Test some string lists..." << std::endl;
 
     LinkedList<std::string> myStringList1;
@@ -97,12 +94,10 @@ int main() {
     }
     std::cout << " String list 1: " << myStringList1 << std::endl;
 
-    std::cout << std::endl;
     std::cout << " Try inserting an element at the beginning" << std::endl;
     myStringList1.insert(0, "Sir!  Sir!");  // Note double spaces required
     std::cout << " String list 1: " << myStringList1 << std::endl;
 
-    std::cout << std::endl;
     std::cout << " Try inserting an element at the end" << std::endl;
     myStringList1.insert(myStringList1.size(), "I love spam!");
     std::cout << " String list 1: " << myStringList1 << std::endl;
@@ -114,16 +109,13 @@ int main() {
     } catch (std::out_of_range &e) {
         std::cout << " Exception: " << e.what() << std::endl;
     }
-    std::cout << std::endl;
     std::cout << " Expected failure trying to insert out of range" << std::endl;
-    
-    std::cout << std::endl;
+
     std::cout << " Remove the first and last element and print result" << std::endl;
     myStringList1.pop_front();
     myStringList1.pop_back();
     std::cout << " String list 1: " << myStringList1 << std::endl;
-    std::cout << std::endl;
+
     std::cout << "Goodbye!" << std::endl;
-    std::cout << std::endl;
     return 0;
 }
