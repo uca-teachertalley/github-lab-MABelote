@@ -109,7 +109,7 @@ int main() {
 
     try
         {
-            myStringList1.insert(myStringList1.size(),"I love spam!");
+            myStringList1.insert(myStringList1.size(), "I love spam!");
             std::cout << "String list 1 has length " << myStringList1.size() << std::endl;
         }
         catch(std::out_of_range &e)
