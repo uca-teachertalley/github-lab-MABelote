@@ -70,7 +70,7 @@ public:
 
     void insert(int index, const T& value) {
         if (index < 0 || index > count) {
-            throw std::out_of_range("Index out of range");
+            throw std::out_of_range("Index out of bounds");
         }
         if (index == 0) {
             push_front(value);
@@ -89,7 +89,7 @@ public:
     }
 
     void pop_back() {
-        if (empty()) throw std::out_of_range("LinkedList is empty");
+        if (empty()) throw std::out_of_range("Index out of bounds");
         if (head == tail) {
             delete head;
             head = tail = nullptr;
@@ -107,7 +107,7 @@ public:
 
   void erase(int index) {
         if (index < 0 || index >= count) {
-            throw std::out_of_range("Index out of range");
+            throw std::out_of_range("Index out of bounds");
         }
         if (index == 0) {
             pop_front();
@@ -127,7 +127,7 @@ public:
     }
 
     void pop_front() {
-        if (empty()) throw std::out_of_range("LinkedList is empty");
+        if (empty()) throw std::out_of_range("Index out of bounds");
         Node* temp = head;
         head = head->next;
         delete temp;
@@ -136,25 +136,25 @@ public:
     }
 
     T front() const {
-        if (empty()) throw std::out_of_range("LinkedList is empty");
+        if (empty()) throw std::out_of_range("Index out of bounds");
         return head->data;
     }
 
     T back() const {
-        if (empty()) throw std::out_of_range("LinkedList is empty");
+        if (empty()) throw std::out_of_range("Index out of bounds");
         return tail->data;
     }
 
-    std::string toString() const {
-        std::stringstream ss;
-        Node* temp = head;
-        while (temp) {
-            ss << temp->data;
-            if (temp->next) ss << " ";
-            temp = temp->next;
-        }
-        return ss.str();
+std::string toString() const {
+    std::stringstream ss;
+    Node* temp = head;
+    while (temp) {
+        ss << temp->data;
+        if (temp->next) ss << " "; 
+        temp = temp->next;
     }
+    return ss.str();
+}
 
     void print() const { std::cout << toString() << std::endl; }
 
